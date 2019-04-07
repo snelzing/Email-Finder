@@ -9,14 +9,14 @@ Confirmation = input("ctrl + A to copy the entire document to your clipboard, an
 
 if Confirmation == "ok" or "Ok":
 #Used for finding email
-    emailRegex = re.compile(r'''([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+(\.[a-zA-Z]{2,4}))''', re.VERBOSE)
+    emailRegex = re.compile(r'''([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+(\.[a-zA-Z]{2,4}))''')
 
     text = str(pyperclip.paste())
     matches = []
     for groups in emailRegex.findall(text):
         Emull = matches.append(groups[0])
 
-    
+
 
 
     if len(matches) > 0:
@@ -26,7 +26,3 @@ if Confirmation == "ok" or "Ok":
 
     else:
         print('No phone numbers or email addresses found.')
-
-
-
-
